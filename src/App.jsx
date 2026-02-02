@@ -2,25 +2,42 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('home')
 
   return (
-    <>
-      <div>
-        <h1>React + Vite</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
+    <div className="app">
+      <header className="header">
+        <nav className="nav">
+          <button
+            className={`nav-tab ${activeTab === 'home' ? 'active' : ''}`}
+            onClick={() => setActiveTab('home')}
+          >
+            Home
           </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
-    </>
+          <button
+            className={`nav-tab ${activeTab === 'products' ? 'active' : ''}`}
+            onClick={() => setActiveTab('products')}
+          >
+            Products
+          </button>
+          <button
+            className={`nav-tab ${activeTab === 'services' ? 'active' : ''}`}
+            onClick={() => setActiveTab('services')}
+          >
+            Services
+          </button>
+          <button
+            className={`nav-tab ${activeTab === 'contact' ? 'active' : ''}`}
+            onClick={() => setActiveTab('contact')}
+          >
+            Contact
+          </button>
+        </nav>
+      </header>
+      <main className="main-content">
+        {/* Content will be displayed here based on active tab */}
+      </main>
+    </div>
   )
 }
 
