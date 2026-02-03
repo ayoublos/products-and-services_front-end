@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Home from './Home'
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
@@ -40,7 +41,10 @@ function App() {
         </div>
       </header>
       <main className="main-content">
-        {/* Content will be displayed here based on active tab */}
+        {activeTab === 'home' && <Home />}
+        {activeTab === 'products' && <div>Products content coming soon...</div>}
+        {activeTab === 'services' && <div>Services content coming soon...</div>}
+        {activeTab === 'contact' && <div>Contact content coming soon...</div>}
       </main>
     </div>
   )
