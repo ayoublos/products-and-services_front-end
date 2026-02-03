@@ -13,11 +13,64 @@
   z-index: 100;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.company-name {
+  padding: 1.2rem 2rem;
+  white-space: nowrap;
+  margin-right: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.logo-text::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(180deg, #646cff 0%, #535bf2 100%);
+  border-radius: 2px;
+}
+
+.company-name:hover .logo-text {
+  background: linear-gradient(135deg, #646cff 0%, #ffffff 50%, #646cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.05);
+}
+
+.company-name:hover .logo-text::before {
+  height: 80%;
+  background: linear-gradient(180deg, #ffffff 0%, #646cff 100%);
+}
+
 .nav {
   display: flex;
   gap: 0;
-  width: 100%;
-  max-width: 100%;
+  flex: 1;
   margin: 0;
 }
 
