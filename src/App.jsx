@@ -10,8 +10,8 @@ function App() {
       <header className="header">
         <div className="header-content">
           <div className="company-name">
-            <div className="octogram"></div>
-            <span className="logo-text">octaspec</span>
+            <div className="marmot-logo"></div>
+            <span className="logo-text">tactical spec</span>
           </div>
           <nav className="nav">
             <button
